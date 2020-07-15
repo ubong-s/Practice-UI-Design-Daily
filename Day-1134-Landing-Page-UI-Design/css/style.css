@@ -1,0 +1,283 @@
+/* Mobile first CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Muli:wght@400;700&display=swap');
+
+:root {
+    --blue: #35c2cf;
+    --orange: #f89259;
+    --gray: #f0f0f9;
+    --blue-text: #1b1839;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 95%;
+    margin: auto;
+}
+
+.showcase {
+    padding: 4rem 0;
+    background-image: url(/images/aerial-view-of-people-swimming-on-sea.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.show-title {
+    font-size: 30px;
+    color: #fff;
+}
+
+.top-sect {
+    padding: 4rem 1rem 6rem;
+}
+
+.s-form {
+    padding: 2rem 1.5rem;
+}
+
+.form-control {
+    position: relative;
+}
+
+.form-icon {
+    width: 20px;
+    position: absolute;
+    top: 1.2rem;
+    left: 0.5rem;
+}
+
+input {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    margin: 0.25rem 0;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-btn {
+    font-size: 1rem;
+    font-weight: 400;
+    display: inline-block;
+    background: var(--orange) !important;
+    color: #fff;
+    padding: 1rem;
+    margin: 0.25rem 0;
+    border: none;
+}
+
+.form-btn:hover {
+    background: var(--blue) !important;
+    transition: all 0.4s ease;
+}
+
+.bottom-sect {
+    padding: 2rem 0;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.btm-box {
+    padding: 1.5rem;
+}
+
+.feat-title {
+    margin-bottom: 1rem;
+    color: var(--blue-text);
+}
+
+.price {
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.e-detail {
+    display: inline-block;
+    background: var(--gray);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem 0
+}
+
+.e-detail > * {
+    vertical-align: middle;
+}
+
+.e-detail img {
+    width: 22px;
+    padding: 0.15rem;
+}
+
+footer {
+    padding: 1rem 2rem;
+    color: white;
+    background: var(--blue);
+    font-size: 0.8rem;
+}
+
+
+/* Tablet */
+@media (min-width: 750px) and (max-width: 1099px) {
+
+    body {
+        overflow-y: hidden;
+    }
+    .bottom-sect {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1.5rem 1rem;
+        background: #fff;
+        border-radius: 10px;
+        text-align: left;
+    }
+    
+    .feat-title {
+        font-size: 18px;
+    }
+
+    .s-form {
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        gap: 0;
+    }
+
+    .form-icon {
+        width: 25px;
+        position: absolute;
+        top: 1.4rem;
+        left: 0.5rem;
+    }
+    
+    input {
+        display: inline;
+        padding: 0.5rem 3rem;
+        margin: 0.25rem 0;
+        height: 4rem;
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
+
+    .form-btn {
+        font-size: 1.2rem;
+        height: 4rem;
+    }
+
+    .e-detail {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Desktop */
+@media (min-width: 1100px) {
+    body {
+        display: grid;
+        text-align: left;
+        padding: auto;
+        margin: auto;
+    }
+
+    .showcase {
+        height: 100%;
+    }
+
+    .top-sect {
+        width: 80%;
+        margin: auto;
+        padding: 4.5rem 0;
+    }
+
+    .show-title {
+        font-size: 42px;
+    }
+    .s-form {
+        padding: 2rem 0;
+        display: grid;
+        grid-template-columns: 2fr 2fr 1fr;
+        gap: 0;
+    }
+
+    .form-icon {
+        width: 25px;
+        position: absolute;
+        top: 1.4rem;
+        left: 0.5rem;
+    }
+    
+    input {
+        display: inline;
+        padding: 0.5rem 3rem;
+        margin: 0.25rem 0;
+        height: 4rem;
+        border: none;
+        border-radius: 0;
+        outline: none;
+    }
+
+    .form-btn {
+        font-size: 1.2rem;
+        height: 4rem;
+    }
+    
+    .bottom-sect {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 1.5rem 1rem;
+        background: #fff;
+        border-radius: 10px;
+    }
+
+    .btm-box {
+        padding: 1rem 2rem;
+    }
+
+    .feat-title {
+        font-size: 26px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+
+    .e-detail img {
+        width: 25px;
+        padding: 0.25rem;
+    }
+
+    footer {
+        padding: 1rem 2.5rem;
+        text-align: end;
+    }
+}
