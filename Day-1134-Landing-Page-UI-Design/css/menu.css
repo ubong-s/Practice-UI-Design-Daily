@@ -202,7 +202,7 @@ header {
         align-items: center;
         justify-content: flex-end;
         transition:none;
-        margin-right: 2rem;
+        margin-right: 0;
     }
 
     .menu-wrap .menu > div > div {
