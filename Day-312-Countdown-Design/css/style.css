@@ -1,0 +1,191 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=PT+Serif:wght@400;700&display=swap');
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --ff-primary: 'PT Serif', sans-serif;
+  --ff-secondary: 'Open Sans', sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.15rem;
+  --radius: 0.5rem;
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --max-width: 1170px;
+  --fixed-width: 620px;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  font-family: var(--ff-secondary);
+  color: #fff;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  margin-bottom: 1.25rem;
+}
+
+header {
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background-image: url(/images/scenic-view-of-rice-paddy.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+header::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.countdown-date {
+  font-family: var(--ff-secondary);
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 65vw;
+  }
+}
+
+.deadline {
+  display: flex;
+  gap: 0.25rem;
+  text-align: center;
+  margin: 4rem auto 2rem;
+}
+
+.deadline-format {
+  flex: 1;
+}
+
+.deadline-format h4 {
+  font-size: 2rem;
+  padding: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  margin-bottom: 0.25rem;
+}
+
+.deadline-format:first-child h4 {
+  border-radius: 50px 0 0 50px;
+}
+
+.deadline-format:last-child h4 {
+  border-radius: 0 50px 50px 0;
+}
+
+.deadline-format span {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 992px) {
+  .deadline {
+    gap: 2rem;
+    margin: 5rem auto 4rem;
+  }
+
+  .deadline-format h4 {
+    font-size: 5rem;
+    padding: 3.5rem 2rem;
+  }
+
+  .deadline-format span {
+    font-size: 2rem;
+    letter-spacing: 2px;
+  }
+}
+
+.expired {
+  font-size: 1rem;
+}
+
+.text {
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 992px) {
+  .expired {
+    font-size: 3rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+}
